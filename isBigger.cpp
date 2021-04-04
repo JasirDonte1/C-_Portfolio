@@ -11,6 +11,7 @@ This program takes user input and compares each of the inputs to each other whil
 #include <string>
 using namespace std;
 
+#prototypes
 double isBigger(double, double);
 
 int main(int argc, const char * argv[]) {
@@ -33,7 +34,7 @@ int main(int argc, const char * argv[]) {
         
     }
     
-    cout << "The largest number is " << largestNum << endl;   //at end of loop, statement prints the number stored in largestNum var
+    cout << "The largest number is " << largestNum << endl;   //at end of loop, statement prints the number stored in largestNum variable
     
     return 0;
 }
