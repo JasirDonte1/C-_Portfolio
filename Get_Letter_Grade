@@ -1,0 +1,62 @@
+/*
+ 
+ Jasir Massey Campbell
+ Assignment 2B
+ C++ Programing
+ 
+ This program uses reference variables, switch statements, and control statments. This program accepts a numerical grade as user input for a homework assignment (0-100) then returns the letter grade value of that class/assignment.
+ 
+ */
+#include <iostream>
+using namespace std;
+
+void getScore(int&);
+void printGrade(int);
+
+
+int main(int argc, const char * argv[]) {
+    int grade;
+    
+    getScore(grade);
+    printGrade(grade);
+    
+    return 0;
+}
+
+void getScore(int& grade){
+    cout << "Enter a numerical grade" << endl;
+    cin >> grade;
+    cout << "Grade printed from getScore() function: " << grade << endl; //specified it should be done in assignment. print statment should look like this.
+}
+void printGrade(int grade){
+    int letter;
+    
+    if (grade > 89.9){              //applies local int letter a number to apply to switch statement
+        letter = 5;
+    }else if (grade > 79.9){
+        letter = 4;
+    }else if (grade > 69.9){
+        letter = 3;
+    }else if (grade > 59.9){
+        letter = 2;
+    }else{
+        letter = 1;
+    }
+    
+//switch statement to determine letter grade
+    switch (letter) {
+        case 1: cout << "You got an F\n";
+            break;
+        case 2: cout << "You got a D\n";
+            break;
+        case 3: cout << "You got a C\n";
+            break;
+        case 4: cout << "You got a B!\n";
+            break;
+        case 5: cout << "You got an A!\n";
+            break;
+        default:
+            break;
+        
+    }
+}
